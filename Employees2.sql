@@ -1,0 +1,16 @@
+CREATE TABLE employee(
+ id SERIAL PRIMARY KEY ,
+ code INTEGER NOT NULL,
+ name TEXT NOT NULL,
+ surname TEXT NOT NULL,
+ fathername TEXT NOT NULL,
+ email TEXT NOT NULL,
+ pin TEXT UNIQUE NOT NULL,
+ deparmentId INTEGER NOT NULL REFERENCES "deparment"(id)
+)
+
+CREATE TABLE Deparment(
+ id INTEGER PRIMARY KEY,
+ name TEXT NOT NULL
+
+)
